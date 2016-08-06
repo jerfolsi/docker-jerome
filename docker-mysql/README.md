@@ -23,7 +23,7 @@ port : 3316 (and not 3306)
 launch a site container linked to the mysql container (OK)
 
 ```
-docker run --name some-app -p 8080:80 -v /Users/jerome/Sites/site1:/var/www/site --link jerome-mysql:mysql -d jerome/apache-php
+docker run --name jerome-apache -p 8080:80 -v /Users/jerome/Sites/site1:/var/www/site --link jerome-mysql:mysql -d jerome/apache-php
 ```
 
 ### test that the app can communicate with the mysql database
