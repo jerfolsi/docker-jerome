@@ -21,6 +21,7 @@ RUN /usr/sbin/php5enmod mcrypt
 #install nano
 RUN apt-get update
 RUN apt-get install nano
+RUN export TERM=xterm
 
 # we use the '&&' operator so that the second command can be executed only if the first one has worked out
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf && \
