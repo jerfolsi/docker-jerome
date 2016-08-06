@@ -40,8 +40,11 @@ RUN rm /etc/apache2/sites-available/000-default.conf
 ADD apache2/000-default.conf /etc/apache2/sites-available
 
 #install the web site
-RUN mkdir /var/www/jerome
-ADD site/index.php /var/www/jerome
+#RUN mkdir /var/www/jerome
+#ADD site/index.php /var/www/jerome
+
+#create a web site directory
+RUN mkdir /var/www/site
 
 # expose the port 80
 EXPOSE 80
