@@ -7,7 +7,7 @@ create + launch the image mysql (en cours...)
 As the image doesn't exist locally, it will download and create the image locally
 
 ```
-docker run --name jerome/mysql5.7 -e MYSQL_ROOT_PASSWORD=root -p 3316:3306 -d mysql:5.7
+docker run --name jerome-mysql -e MYSQL_ROOT_PASSWORD=root -p 3316:3306 -d mysql:5.7
 ```
 
 ### test database with sequel pro
@@ -23,7 +23,7 @@ port : 3316 (and not 3306)
 launch a site container linked to the mysql container (OK)
 
 ```
-docker run --name some-app -p 8080:80 -v /Users/jerome/Sites/site1:/var/www/site --link some-mysql:mysql -d jerome/apache-php
+docker run --name some-app -p 8080:80 -v /Users/jerome/Sites/site1:/var/www/site --link jerome-mysql:mysql -d jerome/apache-php
 ```
 
 ### test that the app can communicate with the mysql database
