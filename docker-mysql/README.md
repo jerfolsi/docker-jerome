@@ -1,13 +1,13 @@
 ### source tutorial
 https://hub.docker.com/_/mysql/
 
-### launch the mysql container 
+### launch the mysql container
 sans dockerfile
 create + launch the image mysql (en cours...)
 As the image doesn't exist locally, it will download and create the image locally
 
 ```
-docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=root -p 3316:3306 -d mysql:5.7
+docker run --name jerome/mysql5.7 -e MYSQL_ROOT_PASSWORD=root -p 3316:3306 -d mysql:5.7
 ```
 
 ### test database with sequel pro
@@ -46,4 +46,3 @@ if ($conn->connect_error) {
 }
 echo "Connected successfully";
 ```
-
